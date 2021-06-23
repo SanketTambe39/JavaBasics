@@ -12,13 +12,15 @@ public class LeapYear {
 		
 		int year;
 		
-		System.out.println("Enter year");
 		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter year");
 		year=sc.nextInt();
 		sc.close();
-		
-		checkLeapYear(year);
-
+		if(year>999 && year<=9999)
+			checkLeapYear(year);
+		else
+			System.out.println("Please enter a valid year");
 	}
 /**
  * Name:checkLeapYear
